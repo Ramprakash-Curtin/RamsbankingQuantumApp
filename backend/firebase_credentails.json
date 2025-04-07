@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "mobilebankingquantumapp",
+    "private_key_id": "f487e795663440f8dd467bfbaa3d9196185dd6d8",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDKbETRFREzY8r\nE76zm2I2muL7bu/7As/ViwI5b+sQ3jxUsVoCTLXai/dme6EgZEoypeKZu4NtUP2V\n5+4ZuJdqz5h7xO8WTRkef/8wVRYRPA8Hs8UNoXnWb268nWq+vvEP2xgR+0t93kqB\neQ6kI/Wh8BuF8iMK/GjXdHjV8bXrLxbX/+zEo7wPAk/h5762j7OeKinvj4Oua/QQ\nsbvQGDaLl5uevYzjvZ7ZEeCtaNNH9kACQAcIRWbR6EXseFy4K7wIRY0ODsBj4NRo\naiyNez/Lr3Ch2RP1r7He+s0Ay5yoQZCdfz4tMiX0/cnz+WB9ZSePKnope6OIhuMu\nE5jCZSoFAgMBAAECggEABbaOOviomN0FoGazEfHuBZgyJdchClGSQPeRSJoooPVI\ngdgxQNj7B9tKEkNzO44ECAiIIiT1m3kf+0fvVexr7lIGbjUdJKN8JULs9v6+pyGB\ndSHDlnsQJIFdlgLrsYrIZsTspvYaxyP/PVwMXCy7T5LGU3z7nqI19Xyw3t51C13n\n3QThFlLDZifzCgOQIx7BBaA54wHpoaEaUp+eWQdrObuIn6fzQmhge+wIduzWAPts\nEO0LITCO11aEkpiIc+b5AqrQtr3Gg2UEBv220JNxZ+vaqSfIQmo0gtR/vioWxQSW\nXpHAYxmhQVKiYoRZb65a65gGOyASa0nqmqQieT6HYQKBgQD5BfcjtFAmdWmhekCm\nDG24XfxzZ/PHyy0mQQ2b/v6g2GoLsCz+qZMvOGVNQM3C+DP16I7A81PKekeOYY/S\nv2+GySTqDvUMLoTyNYRuFo3ySC1vvYNnvLSLiJg9iD+raXXxI8Sy5uGR6X4EMhpj\ntExR8OugREb5K/yTDFYw+pDcsQKBgQDIoW5AITnvR+LYtaIjlP9V3u+psERQVNYP\n1R6wxuxQwlrzQDf23HlyDmybkctxvsn0p2N44/J5VC1fQiu34f54rjzO0rvdBIRT\nWlzc6pU8hL2jnidyr0c4FHcqtCYjZ1ATJRz1xxRq0astwHBOpTrqCniFAlJIXsOS\ncU2z7EHnlQKBgC6z2rS8hWehD410QxmhLRatscHnFgY7aZ1KCAZgnVqHG+RTRyz/\nmpX5iq4hYDWXnQ8abWNsfyNzKWZfj7yjoIPzx1OKOJTvSImwVcTbwAVXWgYh0bor\n3uRoWrz3h5FbNv5hietPd7CIzNR2nRJj5whbGaW2CGWExVrCrouDApYRAoGAC0mB\nsVvtLXgG3BhD2eqc/tC+/PXssfRD4rojsuBOFTEJ+ttnCp1Wu8Lx+0KVhn2sUPZF\n01xHnOnOb6iCWyL8tP9gbmZOqV2CsEnKJaeQ48m3/Yd9Qqd3w0Drf1yJNL6wM5OH\n8I/VpzjKf5Vu/A2xpc8W/qylwmqKaCe1rmShRI0CgYEA9JuXnUUMpBOPk6IO2JTl\n4ngNXMDuYCFmt9rUmiwalGqJulVC6Ly9k8svApv4HWdvBwDQPxkyp5/lEx2z9iIu\nfiYkLTMxclTqtl0WMaMGByzp7Ngt275MRHhPZTAOENfvH7Otw2caOpjs20fVus2b\ncLaYp2SF8eZDh8uiVTdfIVc=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-fbsvc@mobilebankingquantumapp.iam.gserviceaccount.com",
+    "client_id": "101672308874728986028",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40mobilebankingquantumapp.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
