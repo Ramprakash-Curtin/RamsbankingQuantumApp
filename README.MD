@@ -6,7 +6,7 @@ This project is a web-based quantum cryptography secured banking demo applicatio
 - **Backend:** Flask (Python 3.13.2)
 - **Quantum Key Generation:** Qiskit (IBM Quantum)
 - **Database:** Firebase Firestore (NoSQL)
-- **Auth:** Firebase Authentication
+- **Auth:** Firebase Authentications
 
 ---
 
