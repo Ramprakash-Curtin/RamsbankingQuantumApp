@@ -1,213 +1,179 @@
+# Quantum Cryptographic Banking Web App
 
-# 🔐 Quantum-Secured Mobile Banking App
+This project is a web-based quantum cryptography secured banking demo application built using:
 
-This is a cross-platform mobile banking demo built with **React Native (Expo)**, **Firebase**, **Flask**, and **Qiskit**. The app uses quantum-generated session keys to authorize transactions, enhancing security using quantum cryptography.
-
----
-
-## 📦 Tech Stack
-
-- **Frontend:** React Native (Expo), Reanimated, Firebase Auth + Firestore
-- **Backend:** Flask (Python), Firestore, Qiskit (Quantum Key Generation)
-- **Features:**  
-  ✅ Login / Signup  
-  ✅ Firestore balance tracking  
-  ✅ Quantum key generation  
-  ✅ Transfer with key validation  
-  ✅ Transaction history  
-  ✅ Secure UI with alerts & modal animations
+- **Frontend:** React Native for Web with Expo
+- **Backend:** Flask (Python 3.13.2)
+- **Quantum Key Generation:** Qiskit (IBM Quantum)
+- **Database:** Firebase Firestore (NoSQL)
+- **Auth:** Firebase Authentication
 
 ---
 
-## 🛠️ Requirements
+## 🚀 Features
 
-### 📱 Frontend (Expo)
-- [Node.js](https://nodejs.org/) (>= 16.x)
+- Login / Sign-up with Firebase Authentication
+- Quantum key generation on login (Qiskit)
+- Secure fund transfers using quantum key validation
+- Real-time transaction logging per user (via Firestore)
+- User-friendly UI with responsive design
+
+---
+
+## 🛠️ Tech Stack
+
+| Area       | Technology               |
+|------------|---------------------------|
+| Frontend   | React Native for Web (Expo) |
+| Backend    | Flask 3.1.0 (Python 3.13.2) |
+| Quantum    | Qiskit                     |
+| Auth       | Firebase Authentication    |
+| Database   | Firebase Firestore         |
+
+---
+
+## ⚙️ Installation Guide
+
+### 📦 Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js v20.19.0](https://nodejs.org/en/)
+- [Python 3.13.2](https://www.python.org/downloads/)
+- [Git](https://git-scm.com/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
-- `yarn` or `npm`
-- Android Studio or Xcode (for simulators)
-- Firebase project setup
 
-### 🐍 Backend (Flask + Qiskit)
-- Python 3.8–3.11 recommended
-- `pip` (Python package manager)
-- Firebase Admin SDK service account key
+```bash
+npm install -g expo-cli
+```
 
 ---
 
-## ⚙️ Installation
+## 🧮 Backend Setup (Flask + Qiskit)
 
-### 🔹 1. Firebase Setup
-
-- Go to [Firebase Console](https://console.firebase.google.com)
-- Create a new project (or use existing)
-- Enable **Authentication > Email/Password**
-- Create **Cloud Firestore**, in test mode for development
-- Download your **service account key** from:  
-  `Project Settings > Service Accounts > Generate new private key`
-- Save it as: `firebase_credentails.json` inside the backend folder
-
-### 🔹 2. Frontend (React Native)
+1. Navigate to the `backend` directory:
 
 ```bash
-# Clone this repo
-git clone https://github.com/yourusername/quantum-banking-app.git
-cd quantum-banking-app
-
-# Install Expo CLI if not already
-npm install -g expo-cli
-
-# Install dependencies
-cd frontend
-yarn install
-# or
-npm install
-
-# Start Expo
-expo start
-```
-
-### 🔹 3. Backend (Flask + Qiskit)
-
-```bash
-# Move to backend
 cd backend
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
-### 🔸 `requirements.txt`
-```
-Flask
-Flask-Cors
-firebase-admin
-qiskit
+2. Install required Python dependencies:
+
+```bash
+pip install flask
+pip install firebase-admin
+pip install qiskit[visualization]
+pip install qiskit-aer
 ```
 
-### Start the backend
+3. Run the Flask server:
+
 ```bash
 python app.py
 ```
 
-Flask server will run on `http://localhost:5000`.
+> Make sure you have the `firebase_credentials.json` in the `backend` directory.
 
 ---
 
-## 🔑 Firestore Collections
+## 🎨 Frontend Setup (React Native Web with Expo)
 
-| Collection        | Purpose                        |
-|------------------|--------------------------------|
-| `users`          | Stores user info + balance     |
-| `session_keys`   | Temporary quantum keys         |
-| `transactions`   | Logs of each transaction       |
+1. Navigate to the frontend directory:
 
----
-
-## 🔌 React Native Dependencies
-
-```jsonc
-// package.json
-{
-  "dependencies": {
-    "expo": "...",
-    "firebase": "^9.x",
-    "react-native-reanimated": "^3.x",
-    "react-native-bouncy-checkbox": "^2.x",
-    "expo-clipboard": "^4.x",
-    "expo-router": "^3.x",
-    ...
-  }
-}
-```
-
-To install:
 ```bash
-yarn add firebase react-native-reanimated react-native-bouncy-checkbox expo-clipboard expo-router
+cd frontend
 ```
 
-Also install pods for iOS:
+2. Install dependencies:
+
 ```bash
-npx expo prebuild
-cd ios
-pod install
+npm install
+npx expo install react-native-bouncy-checkbox
+npm install firebase
+npm install @react-navigation/native
+npm install react-native-screens react-native-safe-area-context
+npm install @react-navigation/native-stack
+```
+
+3. Start the Expo web server:
+
+```bash
+npx expo start --web
+```
+
+This will launch the web version of your app in the browser.
+
+---
+
+## 🔐 Firebase Setup
+
+1. Create a Firebase project from the [Firebase Console](https://console.firebase.google.com/)
+2. Enable Firestore Database
+3. Enable Email/Password Authentication
+4. Download the service account key as `firebase_credentials.json` and place it in your `backend` folder
+5. Add your Firebase config to `frontend/firebase.js`
+
+---
+
+## 🔥 Firestore Collections
+
+- `users`: stores user profile info and balances
+- `transactions`: logs all transfers
+- `session_keys`: stores per-session quantum keys
+
+---
+
+## 🧠 Quantum Key Flow
+
+- Upon login, a quantum key is generated by Flask using Qiskit
+- The key is stored in Firestore and required for money transfers
+- On logout, the key is deleted
+- A new key is created on next login
+
+---
+
+## 📁 Project Structure
+
+```
+bankingQuantumApp/
+├── backend/
+│   ├── app.py
+│   └── firebase_credentials.json
+├── frontend/
+│   ├── App.js
+│   ├── firebase.js
+│   ├── screens/
+│   ├── components/
+│   └── ...
+└── README.md
 ```
 
 ---
 
-## 🧪 Testing
+## ✅ To Run Everything Together
 
-- Use Expo Go on your device or an Android/iOS simulator.
-- Flask runs locally (`localhost:5000`) so ensure device/emulator can access the local server:
-  - If testing on a **physical phone**, replace `localhost` with your computer's IP (e.g. `http://192.168.1.x:5000`).
-
----
-
-## ✅ Firebase Firestore Rules (for production)
-
-```js
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-
-    match /session_keys/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-
-    match /transactions/{docId} {
-      allow read: if request.auth != null 
-                  && (resource.data.from_user == request.auth.uid 
-                      || resource.data.to_user == request.auth.uid);
-      allow write: if request.auth != null;
-    }
-  }
-}
+1. Start Flask backend:
+```bash
+cd backend
+python app.py
 ```
 
----
-
-## 🧠 Quantum Key Generation
-
-`generate_quantum_key()` is defined using Qiskit:
-
-```python
-from qiskit import QuantumCircuit, Aer, transpile, assemble
-import random
-
-def generate_quantum_key(length=128):
-    backend = Aer.get_backend("qasm_simulator")
-    key = ""
-
-    for _ in range(length):
-        qc = QuantumCircuit(1, 1)
-        if random.choice([True, False]):
-            qc.h(0)
-        qc.measure(0, 0)
-        qobj = assemble(transpile(qc, backend))
-        result = backend.run(qobj).result()
-        counts = result.get_counts()
-        key += max(counts, key=counts.get)
-    return key
+2. In a new terminal, start Expo frontend:
+```bash
+cd frontend
+npx expo start --web
 ```
 
----
-
-## 📷 Screenshots
-
-| Login | Dashboard | Transfer | Key Modal |
-|-------|-----------|----------|-----------|
-| ✅    | ✅         | ✅        | ✅         |
+Your banking app will now be live on http://localhost:8081
 
 ---
 
-## ✨ Credits
+## 🧊 License
 
-Built by [Your Name] as part of a university quantum banking demo.
+This project is for educational/demo purposes. You can build upon it for further enhancements like integrating blockchain, real banking APIs, etc.
+
+---
+
+## 💡 Author
+
+Made with 💙 using Quantum + Firebase + Expo
