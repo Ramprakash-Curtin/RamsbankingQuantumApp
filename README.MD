@@ -161,7 +161,7 @@ python app.py
 2. In a new terminal, start Expo frontend:
 ```bash
 cd frontend
-npx expo start --web
+npm run web
 ```
 
 Your banking app will now be live on http://localhost:8081
