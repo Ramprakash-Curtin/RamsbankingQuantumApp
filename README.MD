@@ -6,7 +6,7 @@ This project is a web-based quantum cryptography secured banking demo applicatio
 - **Backend:** Flask (Python 3.13.2)
 - **Quantum Key Generation:** Qiskit (IBM Quantum)
 - **Database:** Firebase Firestore (NoSQL)
-- **Auth:** Firebase Authentications
+- **Auth:** Firebase Authentication
 
 ---
 
@@ -86,8 +86,10 @@ cd frontend
 
 2. Install dependencies:
 
+Try running "npm run web" after using "npm install" before downloading any dependencies.
+
 ```bash
-npm install
+npm install 
 npx expo install react-native-bouncy-checkbox
 npm install firebase
 npm install @react-navigation/native
