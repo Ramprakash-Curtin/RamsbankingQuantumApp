@@ -98,7 +98,7 @@ npm install @react-navigation/native-stack
 3. Start the Expo web server:
 
 ```bash
-npx expo start --web
+npm run web
 ```
 
 This will launch the web version of your app in the browser.
